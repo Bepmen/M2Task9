@@ -44,25 +44,6 @@ namespace M2Task9._1
             Application.Current.Resources.MergedDictionaries.Add(resource);
         }
 
-
-        #region Обработчики текста
-
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            string fontName = (sender as ComboBox).SelectedItem as String;
-            if (textBox != null)
-                textBox.FontFamily = new FontFamily(fontName);
-        }
-
-        private void ComboBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
-        {
-            double fontHeight = Convert.ToDouble((sender as ComboBox).SelectedItem as String);
-            if (textBox != null)
-                textBox.FontSize = fontHeight;
-        }
-
-        #endregion
-
         #region Обработчики ToolBar "Кнопки"
 
         bool isBold;
